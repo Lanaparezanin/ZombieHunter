@@ -525,7 +525,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
-  m_Camera: {fileID: 1869743585}
 --- !u!82 &807995361
 AudioSource:
   m_ObjectHideFlags: 0
@@ -647,7 +646,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807995359}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9998805, w: -0.015462967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -461.77594, y: 10.8414135, z: -204.477}
   m_LocalScale: {x: 0.5000002, y: 0.5000002, z: 0.5}
   m_Children:
