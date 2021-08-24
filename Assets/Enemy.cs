@@ -4,6 +4,11 @@ public class Enemy : MonoBehaviour
 {
     public float health = 50f;
 
+    private void Start()
+    {
+        
+    }
+
     public void TakeDamage(float amount)
     {
         health -= amount;
