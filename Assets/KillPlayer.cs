@@ -11,7 +11,7 @@ public class KillPlayer : MonoBehaviour
         if (other.tag == "Player")
         {
             deathScreen.SetActive(true);
-            Debug.Log("Entered collider");
+            //Debug.Log("Entered collider");
         }
     }
 }
