@@ -4,11 +4,13 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float health = 10f;
+    
 
     Animator animator;
     zombiemove scriptForMovement;
     Collider collider;
     NavMeshAgent navmesh;
+    public GameObject ZombieController;
 
     /**/private void Start()
     {
@@ -34,6 +36,9 @@ public class Enemy : MonoBehaviour
         Destroy(scriptForMovement);
         //Destroy(collider);
         Destroy(navmesh);
+        Destroy(ZombieController);
         //Destroy(gameObject);
     }
+
+    
 }
