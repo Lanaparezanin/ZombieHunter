@@ -19,6 +19,7 @@ public class zombiemove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        navMeshAgent.SetDestination(igrac.position);
+        transform.LookAt(igrac, Vector3.up);
     }
 }
