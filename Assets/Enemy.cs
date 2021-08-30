@@ -5,7 +5,6 @@ public class Enemy : MonoBehaviour
 {
     public float health = 10f;
     
-
     Animator animator;
     zombiemove scriptForMovement;
     Collider collider;
@@ -20,7 +19,7 @@ public class Enemy : MonoBehaviour
         navmesh = gameObject.GetComponent<NavMeshAgent>();
         //ZombieController = gameObject.Find("ZombieController");
         ZombieController = transform.GetChild(31).gameObject;
-        ZombieController.SetActive(false);
+        //ZombieController.SetActive(false);
     }
 
     public void TakeDamage(float amount)
@@ -39,7 +38,7 @@ public class Enemy : MonoBehaviour
         Destroy(scriptForMovement);
         //Destroy(collider);
         Destroy(navmesh);
-        //Destroy(ZombieController);
+        Destroy(ZombieController);
         //Destroy(gameObject);
     }
 
