@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -58,7 +56,6 @@ public class Level1BossController : MonoBehaviour
 
     void TaskOnClick()
     {
-        Debug.Log("OVDJE");
         if (value >= 14 && value <= 16)
         {
             Killer();
