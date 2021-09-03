@@ -1690,7 +1690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4507433646410060, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.6
+      value: -21.59
       objectReference: {fileID: 0}
     - target: {fileID: 4507433646410060, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1698,7 +1698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4507433646410060, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.61
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 4507433646410060, guid: b87cb604b959698428935c5d56bd97c0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7972,13 +7972,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1134695857}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7ec4e12223e88045b893348c46ba5eb, type: 3}
+  m_Script: {fileID: 11500000, guid: e2beb25b1f719c24e9ff85bfbad548b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 702086899}
   inputField1: {fileID: 1110516088}
   projectile: {fileID: 1742985493}
-  launchVelocity: 300
+  launchVelocity: 0
   damage: 20
   range: 100
   impact: 30

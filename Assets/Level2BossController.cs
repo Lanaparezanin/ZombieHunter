@@ -1,14 +1,14 @@
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
 
-public class Level1BossController : MonoBehaviour
+public class Level2BossController : MonoBehaviour
 {
     //public GameObject weapon;
     public Button button;
 
     public InputField inputField1;
     int value = 0;
-    
+
     public GameObject projectile;
     public float launchVelocity;// = 700f;
 
@@ -50,12 +50,12 @@ public class Level1BossController : MonoBehaviour
 
     void Killer()
     {
-        launchVelocity = 300f;
+        launchVelocity = 500f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
 
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
-                                             (launchVelocity, launchVelocity, 0));
+                                             (launchVelocity, 300, 500));
     }
 
     void MissedUp()

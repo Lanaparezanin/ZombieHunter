@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("DIE");
+        //Debug.Log("DIE");
         animator.SetBool("isShot", true);
         //scriptForMovement.enabled = false;
         Destroy(scriptForMovement);

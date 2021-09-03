@@ -16,7 +16,7 @@ public class CauseDamage : MonoBehaviour
     {
         if (other.tag == "Zombie")
         {
-            rgbody.AddForce(transform.right * 20f);
+            //rgbody.AddForce(transform.right * 20f);
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null)
             {
