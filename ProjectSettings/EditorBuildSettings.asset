@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Nivo1.unity
+    guid: 66ebbd35dccd9e740a6ef804c04d2de9
+  - enabled: 1
+    path: Assets/Scenes/Nivo1 Boss.unity
+    guid: 2b18295022d164549abdb67d9c48ec67
+  - enabled: 1
+    path: Assets/Scenes/Nivo2 Boss.unity
+    guid: 807b1293d00f0364b8dfcb4b8d56d320
+  - enabled: 1
+    path: Assets/Scenes/Nivo2.unity
+    guid: 508635e3d13c6274d9841422dc578fb8
+  - enabled: 1
+    path: Assets/Scenes/Nivo3 Boss.unity
+    guid: 73a1922cd37c01e4085045a08eaa9822
+  - enabled: 1
+    path: Assets/Scenes/Nivo3.unity
+    guid: 8054ad3e5265c524c9b7e19d4a0839be
   m_configObjects: {}

@@ -1,5 +1,7 @@
-using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Level1BossController : MonoBehaviour
 {
@@ -56,6 +58,7 @@ public class Level1BossController : MonoBehaviour
 
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
+        StartCoroutine(NextLevel());
     }
 
     void MissedUp()
@@ -77,5 +80,11 @@ public class Level1BossController : MonoBehaviour
 
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
+    }
+
+    private IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Nivo2");
     }
 }

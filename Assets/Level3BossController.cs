@@ -97,16 +97,7 @@ public class Level3BossController : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         TryAgainScreen.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
-        //SceneManager.LoadScene("Nivo3 Boss");
-        //Application.LoadLevel(Application.loadedLevel);
-        /*TryAgainScreen.SetActive(false);
-        MissedShotUp.SetActive(false);
-        MissedShotDown.SetActive(false);
-        ZombiStoji.SetActive(true);
-        GameObject ZombiPada1 = Instantiate(ZombiPada, transform.position,
-                                                      transform.rotation);
-        ZombiPada.SetActive(false);*/
     }
 }
