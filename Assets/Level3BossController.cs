@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Level3BossController : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class Level3BossController : MonoBehaviour
 
     public GameObject ZombiStoji;
     public GameObject ZombiPada;
+
     public GameObject ZombieShotRedDot;
+    public GameObject MissedShotUp;
+    public GameObject MissedShotDown;
 
     public GameObject WinScreen;
+    public GameObject TryAgainScreen;
 
     public InputField inputField1;
     int value = 0;
@@ -61,12 +66,23 @@ public class Level3BossController : MonoBehaviour
 
     void MissedUp()
     {
-        
+        //make zombie fall
+        ZombiStoji.SetActive(false);
+        ZombiPada.SetActive(true);
+
+        MissedShotUp.SetActive(true);
+        StartCoroutine(TryAgain());
+
     }
 
     void MissedDown()
     {
-       
+        //make zombie fall
+        ZombiStoji.SetActive(false);
+        ZombiPada.SetActive(true);
+
+        MissedShotDown.SetActive(true);
+        StartCoroutine(TryAgain());
     }
 
     private IEnumerator ZombieShot()
@@ -75,5 +91,22 @@ public class Level3BossController : MonoBehaviour
         ZombieShotRedDot.SetActive(true);
         yield return new WaitForSeconds(1);
         WinScreen.SetActive(true);
+    }
+
+    private IEnumerator TryAgain()
+    {
+        yield return new WaitForSeconds(0.5f);
+        TryAgainScreen.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        //SceneManager.LoadScene("Nivo3 Boss");
+        //Application.LoadLevel(Application.loadedLevel);
+        /*TryAgainScreen.SetActive(false);
+        MissedShotUp.SetActive(false);
+        MissedShotDown.SetActive(false);
+        ZombiStoji.SetActive(true);
+        GameObject ZombiPada1 = Instantiate(ZombiPada, transform.position,
+                                                      transform.rotation);
+        ZombiPada.SetActive(false);*/
     }
 }
