@@ -55,9 +55,9 @@ public class Level1BossController : MonoBehaviour
         launchVelocity = 300f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
-                                             (launchVelocity, launchVelocity, 0));
+                                             (launchVelocity, launchVelocity-200, 0));
         StartCoroutine(NextLevel());
     }
 
@@ -66,7 +66,7 @@ public class Level1BossController : MonoBehaviour
         launchVelocity = 900f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
     }
@@ -77,14 +77,14 @@ public class Level1BossController : MonoBehaviour
 
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
     }
 
     private IEnumerator NextLevel()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Nivo2");
     }
 }
