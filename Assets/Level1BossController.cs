@@ -36,15 +36,15 @@ public class Level1BossController : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (value >= 14 && value <= 16)
+        if (value >= 9.5 && value <= 10.5)
         {
             Killer();
         }
-        else if (value > 16)
+        else if (value > 10.5)
         {
             MissedUp();
         }
-        else if (value < 14)
+        else if (value < 9.5)
         {
             MissedDown();
         }
@@ -55,9 +55,9 @@ public class Level1BossController : MonoBehaviour
         launchVelocity = 300f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
-                                             (launchVelocity, launchVelocity, 0));
+                                             (launchVelocity, launchVelocity-200, 0));
         StartCoroutine(NextLevel());
     }
 
@@ -66,7 +66,7 @@ public class Level1BossController : MonoBehaviour
         launchVelocity = 900f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
     }
@@ -77,14 +77,14 @@ public class Level1BossController : MonoBehaviour
 
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
-
+        ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
         ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3
                                              (launchVelocity, launchVelocity, 0));
     }
 
     private IEnumerator NextLevel()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("Nivo2");
     }
 }

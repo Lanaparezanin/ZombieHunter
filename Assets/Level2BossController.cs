@@ -36,15 +36,15 @@ public class Level2BossController : MonoBehaviour
 
     void TaskOnClick()
     {
-        if (value >= 14 && value <= 16)
+        if (value >= 28 && value <= 32)
         {
             Killer();
         }
-        else if (value > 16)
+        else if (value > 32)
         {
             MissedUp();
         }
-        else if (value < 14)
+        else if (value < 28)
         {
             MissedDown();
         }

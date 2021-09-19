@@ -1,5 +1,8 @@
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -40,8 +43,13 @@ public class Enemy : MonoBehaviour
         //Destroy(collider);
         Destroy(navmesh);
         Destroy(ZombieController);
+        StartCoroutine(ZombieDisappears());
         //Destroy(gameObject);
     }
 
-    
+    private IEnumerator ZombieDisappears()
+    {
+        yield return new WaitForSeconds(3f);
+        this.gameObject.SetActive(false);
+    }
 }
