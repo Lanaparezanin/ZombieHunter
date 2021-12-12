@@ -22,6 +22,7 @@ public class Level1BossController : MonoBehaviour
     {
         inputField1.ActivateInputField();
         button.onClick.AddListener(TaskOnClick);
+        Cursor.visible = true;
     }
 
     private void Update()
