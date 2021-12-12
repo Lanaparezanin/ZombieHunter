@@ -22,6 +22,8 @@ public class Level2BossController : MonoBehaviour
     {
         inputField1.ActivateInputField();
         button.onClick.AddListener(TaskOnClick);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void Update()
