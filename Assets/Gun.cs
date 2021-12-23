@@ -5,10 +5,17 @@ public class Gun : MonoBehaviour
     public float damage = 20f;
     public float range = 100f;
     public float impact = 30f;
+    public AudioSource audio;
 
     //public GameObject gunSound;
 
     public Camera fpsCam;
+
+    private void Start()
+    {
+        audio = gameObject.AddComponent<AudioSource>();
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -16,7 +23,7 @@ public class Gun : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-            AudioSource audio = gameObject.AddComponent<AudioSource>();
+            
             audio.PlayOneShot(Resources.Load<AudioClip>("Sounds/bullet"));
             //Resources.Load<AudioClip>("Audio/audioClip01");
         }
