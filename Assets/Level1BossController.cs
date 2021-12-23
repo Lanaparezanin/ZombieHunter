@@ -65,7 +65,7 @@ public class Level1BossController : MonoBehaviour
 
     void MissedUp()
     {
-        launchVelocity = 900f;
+        launchVelocity = value*2;//900f;
         GameObject ball = Instantiate(projectile, transform.position,
                                                       transform.rotation);
         ball.transform.position = new Vector3(16.3f, 4.33f, 60.97f);
